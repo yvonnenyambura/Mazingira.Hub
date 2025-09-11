@@ -9,14 +9,14 @@ function ResidentDashboards() {
     const [category, setCategory] = useState('');
     const navigate = useNavigate();
 
-    // Fetch all complaints submitted by this resident (optional: filter by userId)
+   
     useEffect(() => {
         fetchComplaints();
     }, []);
 
     const fetchComplaints = async () => {
         const data = await getComplaint();
-        setComplaints(data); // You can filter by resident ID if you store userId in complaint
+        setComplaints(data); 
     };
 
     // Submit a new complaint
@@ -27,14 +27,9 @@ function ResidentDashboards() {
             return;
         }
 
-        const complaint = {
-            title,
-            description,
-            category,
-            status: 'pending', // default status
-            createdAt: new Date().toISOString()
-            // optionally: userId: auth.currentUser.uid
-        };
+        const complaint = { title, description, category, status: 'pending', createdAt: new Date().toISOString()
+
+         };
 
         await addComplaint(complaint);
         alert('Complaint submitted successfully!');
@@ -44,7 +39,7 @@ function ResidentDashboards() {
         fetchComplaints();
     };
 
-    // Logout
+ 
     const handleLogout = async () => {
         await logoutUser();
         navigate('/login');

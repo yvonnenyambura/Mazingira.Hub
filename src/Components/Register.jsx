@@ -16,10 +16,10 @@ function Register() {
         }
 
         try {
-            // Create user with Firebase Auth
+           
             const res = await createUserWithEmailAndPassword(auth, email, password);
 
-            // Set user role in Firestore
+          
             await setUserRole(res.user.uid, role);
 
             alert("Registration successful!");
