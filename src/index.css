@@ -1,0 +1,33 @@
+/* index.css */
+
+/* Import Tailwind base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: global custom styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #0f172a, #1e3a8a);
+  color: #f1f5f9;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
