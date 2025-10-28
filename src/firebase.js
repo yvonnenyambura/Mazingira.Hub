@@ -1,49 +1,16 @@
-<<<<<<< HEAD
-// src/firebase.js
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
 
-// Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyBQJv-ip15W3h1NoxoAkjazdU4RlZkAQRY",
-  authDomain: "mazingira-hub-e930a.firebaseapp.com",
-  projectId: "mazingira-hub-e930a",
-  storageBucket: "mazingira-hub-e930a.appspot.com",
-  messagingSenderId: "202213806597",
-  appId: "1:202213806597:web:9985bbfd52af4a16c1c26c",
-  measurementId: "G-5LRDCJZVPB",
-};
-
-// Initialize Firebase app
-const app = initializeApp(firebaseConfig);
-
-// Initialize Firebase services
-export const auth = getAuth(app);
-export const db = getFirestore(app);
-export const storage = getStorage(app);
-
-export default app;
-
-
-
-
-
-=======
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore, collection, addDoc, getDocs, updateDoc, deleteDoc, doc, setDoc, getDoc } from "firebase/firestore";
 
 // Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyAiKC9jQelbLiFQEuxzIXlhkzYjH0LDAFE",
-  authDomain: "mazingira-hub.firebaseapp.com",
-  projectId: "mazingira-hub",
-  storageBucket: "mazingira-hub.firebasestorage.app",
-  messagingSenderId: "140473040895",
-  appId: "1:140473040895:web:bb5287f6f15877221c31ca",
-  measurementId: "G-GNVYK4DSBF"
+  apiKey: "AIzaSyCbQeQBsjy3VdPzE6Oap0YcAqgxWfgVykU",
+  authDomain: "mazingirahu.firebaseapp.com",
+  projectId: "mazingirahu",
+  storageBucket: "mazingirahu.firebasestorage.app",
+  messagingSenderId: "318497735625",
+  appId: "1:318497735625:web:53158f18005237cf971e18"
 };
 
 // Initialize Firebase
@@ -75,4 +42,4 @@ export const getComplaint = async () => {
 };
 export const updateComplaint = (id, complaint) => updateDoc(doc(db, 'complaints', id), complaint);
 export const deleteComplaint = (id) => deleteDoc(doc(db, 'complaints', id));
->>>>>>> 9b11a35a85b735376f2b74ca68ebaed645e7e809
+
